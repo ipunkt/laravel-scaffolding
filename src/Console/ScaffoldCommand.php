@@ -149,7 +149,20 @@ class ScaffoldCommand extends Command
 	protected function buildPlaceholder()
 	{
 		$name = $this->getNameInput();
+		$suffixedNamespace = $prefixedNamespace = $namespace = '';
 
+		$namespaceSeparator = "\\";
+		if (substr_count($name, $namespaceSeparator)) {
+			$parts = explode($namespaceSeparator, $name);
+			$name = array_pop($parts);
+			$namespace = implode($namespaceSeparator, $parts);
+			$prefixedNamespace = $namespaceSeparator . implode($namespaceSeparator, $parts);
+			$suffixedNamespace = implode($namespaceSeparator, $parts) . $namespaceSeparator;
+		}
+
+		$this->placeholder->put('{{Namespace}}', $namespace);
+		$this->placeholder->put('{{\Namespace}}', $prefixedNamespace);
+		$this->placeholder->put('{{Namespace\}}', $suffixedNamespace);
 		$this->placeholder->put('{{Model}}', str_singular($name));
 		$this->placeholder->put('{{model}}', strtolower(str_singular($name)));
 		$this->placeholder->put('{{Models}}', str_plural($name));
@@ -159,6 +172,8 @@ class ScaffoldCommand extends Command
 		foreach ($placeholder as $key => $value) {
 			$this->placeholder->put('{{' . $key . '}}', value($value));
 		}
+
+		$this->placeholder->dump();
 	}
 
 	/**
@@ -238,6 +253,9 @@ class ScaffoldCommand extends Command
 			throw new \InvalidArgumentException('No target for ' . $resource . ' configured');
 		}
 		$target = $this->replacePlaceholder($target);
+		$target = str_replace([
+			"\\",
+		], '/', $target);
 
 		$append = array_get($options, 'append', false);
 		if ($append) {
