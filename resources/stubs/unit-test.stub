@@ -1,0 +1,22 @@
+<?php
+
+namespace Tests\Unit{{\Namespace}};
+
+use Tests\TestCase;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+
+class {{Model}}Test extends TestCase
+{
+	use RefreshDatabase;
+
+	/** @test */
+	public function it_can_test_a_feature()
+	{
+		// ARRANGE
+
+		// ACT
+
+		// ASSERT
+
+	}
+}

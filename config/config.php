@@ -81,6 +81,20 @@ return [
 				'append' => true,
 			],
 		],
+
+		/**
+		 * Test Cases
+		 */
+		'Test' => [
+			[
+				'stub' => resource_path('stubs/feature-test.stub'),
+				'target' => base_path('tests/Feature/{{Namespace\}}{{Model}}Test.php'),
+			],
+			[
+				'stub' => resource_path('stubs/unit-test.stub'),
+				'target' => base_path('tests/Unit/{{Namespace\}}{{Model}}Test.php'),
+			],
+		],
 	],
 
 	/**
