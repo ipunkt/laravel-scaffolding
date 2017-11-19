@@ -28,6 +28,20 @@ return [
 		],
 
 		/**
+		 * Database Migration
+		 */
+		'Migration' => [
+			[
+				'stub' => resource_path('stubs/create-migration.stub'),
+				'target' => database_path('migrations/{{migrationDate}}_create_{{models}}_table.php'),
+			],
+			[
+				'stub' => resource_path('stubs/alter-migration.stub'),
+				'target' => database_path('migrations/{{migrationDate}}_alter_{{models}}_table.php'),
+			],
+		],
+
+		/**
 		 * Resource Controller
 		 */
 		'Controller' => [
@@ -70,6 +84,10 @@ return [
 	'placeholder' => [
 		'rootNamespace' => function () {
 			return app()->getNamespace();
+		},
+
+		'migrationDate' => function () {
+			return date('Y_m_d_His');
 		}
 	],
 ];
