@@ -1,26 +1,13 @@
-# laravel-package
-A basic laravel package to start a new package.
+# Scaffolding for your project
 
-Simply type `composer create-project ipunkt/laravel-package YOUR-PACKAGE-NAME` and hit enter.
+[![Latest Stable Version](https://poser.pugx.org/ipunkt/laravel-scaffolding/v/stable.svg)](https://packagist.org/packages/ipunkt/laravel-scaffolding) [![Latest Unstable Version](https://poser.pugx.org/ipunkt/laravel-scaffolding/v/unstable.svg)](https://packagist.org/packages/ipunkt/laravel-scaffolding) [![License](https://poser.pugx.org/ipunkt/laravel-scaffolding/license.svg)](https://packagist.org/packages/ipunkt/laravel-scaffolding) [![Total Downloads](https://poser.pugx.org/ipunkt/laravel-scaffolding/downloads.svg)](https://packagist.org/packages/ipunkt/laravel-scaffolding)
 
-After installation you have to customize your generated plugin code.
-
-Check all the given providers if you need them and the files. Remove all unnecessary ones.
-
-Update this documentation to have your plugin documented like a hero.
-
-Remove all above the line and update the text below the line.
-
----
-
-# Your Package for Laravel
-
-[![Latest Stable Version](https://poser.pugx.org/ipunkt/laravel-package/v/stable.svg)](https://packagist.org/packages/ipunkt/laravel-package) [![Latest Unstable Version](https://poser.pugx.org/ipunkt/laravel-package/v/unstable.svg)](https://packagist.org/packages/ipunkt/laravel-package) [![License](https://poser.pugx.org/ipunkt/laravel-package/license.svg)](https://packagist.org/packages/ipunkt/laravel-package) [![Total Downloads](https://poser.pugx.org/ipunkt/laravel-package/downloads.svg)](https://packagist.org/packages/ipunkt/laravel-package)
+This laravel package can scaffold a new resource within seconds. It uses all project-based template stubs to get your project-based setup within the stubs.
 
 ## Quickstart
 
 ```
-composer require ipunkt/laravel-package
+composer require --dev ipunkt/laravel-scaffolding
 ```
 
 We support package auto-discovery for laravel, so you are ready to use the package.
@@ -31,10 +18,10 @@ We support package auto-discovery for laravel, so you are ready to use the packa
 Add to your composer.json following lines
 
 	"require": {
-		"ipunkt/laravel-package": "*"
+		"ipunkt/laravel-scaffolding": "*"
 	}
 
-You can publish all provided files by typing `php artisan vendor:publish` and select to package provider (or one of the provided tags - but be careful, tags are global).
+You can publish all provided files by typing `php artisan vendor:publish` and select the `LaravelScaffoldingServiceProvider`.
 
 ## Configuration
 
