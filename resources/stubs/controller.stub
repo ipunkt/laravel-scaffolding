@@ -2,6 +2,7 @@
 
 namespace {{rootNamespace}}Http\Controllers{{\Namespace}};
 
+use App\Http\Controllers\Controller;
 use {{rootNamespace}}Http\Requests\{{Namespace\}}Create{{Model}}Request;
 use {{rootNamespace}}Http\Requests\{{Namespace\}}Update{{Model}}Request;
 use Illuminate\Http\Request;
