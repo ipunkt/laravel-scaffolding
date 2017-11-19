@@ -57,12 +57,11 @@ Within the stubs and target values you can use them with the prefix `{{` and the
 
 These placeholders are provided internally:
 
-| --- | --- | --- |
 | Placeholder | Value for Resource `User` | Value for Resource `Administration\User` |
 | --- | --- | --- |
-| `{{Namespace}}` | `` | `Administration` |
-| `{{\Namespace}}` | `` | `\Administration` |
-| `{{Namespace\}}` | `` | `Administration\` |
+| `{{Namespace}}` | empty string | `Administration` |
+| `{{\Namespace}}` | empty string | `\Administration` |
+| `{{Namespace\}}` | empty string | `Administration\` |
 | `{{Model}}` | `User` | `User` |
 | `{{model}}` | `user` | `user` |
 | `{{Models}}` | `Users` | `Users` |
