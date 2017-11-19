@@ -42,6 +42,14 @@ return [
 		],
 
 		/**
+		 * Database Migration
+		 */
+		'Seeder' => [
+			'stub' => resource_path('stubs/seeder.stub'),
+			'target' => database_path('seeds/{{Model}}Seeder.php'),
+		],
+
+		/**
 		 * Resource Controller
 		 */
 		'Controller' => [
