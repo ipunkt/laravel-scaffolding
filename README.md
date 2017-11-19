@@ -17,15 +17,36 @@ We support package auto-discovery for laravel, so you are ready to use the packa
 
 Add to your composer.json following lines
 
-	"require": {
+	"require-dev": {
 		"ipunkt/laravel-scaffolding": "*"
 	}
 
-You can publish all provided files by typing `php artisan vendor:publish` and select the `LaravelScaffoldingServiceProvider`.
+You can publish all provided files by typing `php artisan vendor:publish` and select the `LaravelScaffoldingServiceProvider`. We also provide tags `scaffolding-config` and `scaffolding-stubs` for the corresponding resources.
 
 ## Configuration
 
-Here are the configuration options:
+The main configuration is divided into two parts: `resources` and `placeholder`.
+
+### Resources Configuration
+
+Here is a full example resource configuration:
+```php
+/**
+ * Resource Model
+ */
+'Model' => [
+	'stub' => resource_path('stubs/model.stub'),
+	'target' => app_path('Models/{{Model}}.php'),
+	'append' => false, // optional, false by default
+],
+```
+
+Foreach resource you have to configure one or more sets of an array with the keys `stub` (the stub file), `target` (transformed file will be saved there) and optional `append` to configure whether the file gets appended or created.
+
+The `stub` represents a text file with placeholders. The `target` property can handle placeholders and resolves the directory a resource gets saved to.
+
+### Placeholder Configuration
+
 
 ## Usage
 
