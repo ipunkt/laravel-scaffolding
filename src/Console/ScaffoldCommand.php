@@ -8,7 +8,7 @@ use Illuminate\Filesystem\Filesystem;
 class ScaffoldCommand extends Command
 {
 	protected $signature = 'scaffold
-							{ name : The name of the resource }
+							{ name : The name of the resource (Model or Namespace\Model) }
 							{ --with=* : Only generate with this resource types }
 							{ --except=* : Only generate resources without following }
 							{ --force : Overwrite existing files }
