@@ -24,7 +24,7 @@ return [
 		 */
 		'Factory' => [
 			'stub' => resource_path('stubs/factory.stub'),
-			'target' => database_path('factories/{{Namespace\}}{{Model}}Factory.php'),
+			'target' => database_path('factories/{{Namespace}}{{Model}}Factory.php'),
 		],
 
 		/**
