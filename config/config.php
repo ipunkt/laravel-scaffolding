@@ -32,7 +32,7 @@ return [
 		 */
 		'Controller' => [
 			'stub' => resource_path('stubs/controller.stub'),
-			'target' => app_path('Http/Controllers/{{Models}}Controller.php'),
+			'target' => app_path('Http/Controllers/{{Namespace\}}{{Models}}Controller.php'),
 		],
 
 		/**
@@ -41,11 +41,11 @@ return [
 		'Request' => [
 			[
 				'stub' => resource_path('stubs/create-request.stub'),
-				'target' => app_path('Http/Requests/Create{{Model}}Request.php'),
+				'target' => app_path('Http/Requests/{{Namespace\}}Create{{Model}}Request.php'),
 			],
 			[
 				'stub' => resource_path('stubs/update-request.stub'),
-				'target' => app_path('Http/Requests/Update{{Model}}Request.php'),
+				'target' => app_path('Http/Requests/{{Namespace\}}Update{{Model}}Request.php'),
 			],
 		],
 

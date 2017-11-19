@@ -1,9 +1,9 @@
 <?php
 
-namespace {{rootNamespace}}Http\Controllers;
+namespace {{rootNamespace}}Http\Controllers{{\Namespace}};
 
-use {{rootNamespace}}Http\Requests\Create{{Model}}Request;
-use {{rootNamespace}}Http\Requests\Update{{Model}}Request;
+use {{rootNamespace}}Http\Requests\{{Namespace\}}Create{{Model}}Request;
+use {{rootNamespace}}Http\Requests\{{Namespace\}}Update{{Model}}Request;
 use Illuminate\Http\Request;
 
 class {{Models}}Controller extends Controller
@@ -31,7 +31,7 @@ class {{Models}}Controller extends Controller
 	/**
 	 * Store a newly created resource in storage.
 	 *
-	 * @param  \{{rootNamespace}}Http\Requests\Create{{Model}}Request  $request
+	 * @param  \{{rootNamespace}}Http\Requests\{{Namespace\}}Create{{Model}}Request  $request
 	 * @return \Illuminate\Http\Response
 	 */
 	public function store(Create{{Model}}Request $request)
@@ -64,7 +64,7 @@ class {{Models}}Controller extends Controller
 	/**
 	 * Update the specified resource in storage.
 	 *
-	 * @param  \{{rootNamespace}}Http\Requests\Update{{Model}}Request  $request
+	 * @param  \{{rootNamespace}}Http\Requests\{{Namespace\}}Update{{Model}}Request  $request
 	 * @param  int  $id
 	 * @return \Illuminate\Http\Response
 	 */
