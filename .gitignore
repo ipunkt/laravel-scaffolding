@@ -5,6 +5,7 @@ npm-debug.log
 
 # Composer specific
 composer.lock
+composer.phar
 
 # Laravel 5 & Lumen specific
 public/storage
