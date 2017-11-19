@@ -5,6 +5,7 @@ namespace Ipunkt\LaravelScaffolding\Providers;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
 use Ipunkt\LaravelScaffolding\Console\ScaffoldCommand;
+use Ipunkt\LaravelScaffolding\Console\ScaffoldShowCommand;
 
 class LaravelScaffoldingServiceProvider extends ServiceProvider
 {
@@ -12,6 +13,7 @@ class LaravelScaffoldingServiceProvider extends ServiceProvider
 
 	protected $commands = [
 		ScaffoldCommand::class,
+		ScaffoldShowCommand::class,
 	];
 
 	protected $registerOnlyForConsole = true;
