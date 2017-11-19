@@ -47,7 +47,7 @@ Here is a full example resource configuration:
 
 Foreach resource you have to configure one or more sets of an array with the keys `stub` (the stub file), `target` (transformed file will be saved there) and optional `append` to configure whether the file gets appended or created.
 
-The `stub` represents a text file with placeholders. The `target` property can handle placeholders and resolves the directory a resource gets saved to.
+The `stub` represents a text file with placeholders. The `target` property can handle placeholders and resolves the directory a resource gets saved to. Namespace separator will be automatically replaced by a directory separator.
 
 ### Placeholder Configuration
 
