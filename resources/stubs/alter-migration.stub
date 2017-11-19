@@ -9,27 +9,27 @@ use Illuminate\Database\Migrations\Migration;
  */
 class Alter{{Models}}Table extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    public function up()
-    {
-        Schema::table('{{models}}', function (Blueprint $table) {
-            //
-        });
-    }
+	/**
+	 * Run the migrations.
+	 *
+	 * @return void
+	 */
+	public function up()
+	{
+		Schema::table('{{models}}', function (Blueprint $table) {
+			//
+		});
+	}
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::table('{{models}}', function (Blueprint $table) {
-            // $table->dropColumn('');
-        });
-    }
+	/**
+	 * Reverse the migrations.
+	 *
+	 * @return void
+	 */
+	public function down()
+	{
+		Schema::table('{{models}}', function (Blueprint $table) {
+			// $table->dropColumn('');
+		});
+	}
 }
