@@ -4,6 +4,10 @@
 
 This laravel package can scaffold a new resource within seconds. It uses all project-based template stubs to get your project-based setup within the stubs.
 
+You provide your type of scaffolding by providing your stubs. We seed the first stubs with the package publishing. Afterwards you can modify all stubs to suit your needs. After configuring your stubs they will automatically be generated.
+
+This boosts your development time a lot.
+
 ## Quickstart
 
 ```
@@ -47,7 +51,41 @@ The `stub` represents a text file with placeholders. The `target` property can h
 
 ### Placeholder Configuration
 
+You can add necessary placeholders yourself. Simply add your keys and a callback as value. The callback gets resolved by calling `value()` function with it internally.
+
+Within the stubs and target values you can use them with the prefix `{{` and the suffix `}}` surrounded.
+
+These placeholders are provided internally:
+
+| --- | --- | --- |
+| Placeholder | Value for Resource `User` | Value for Resource `Administration\User` |
+| --- | --- | --- |
+| `{{Namespace}}` | `` | `Administration` |
+| `{{\Namespace}}` | `` | `\Administration` |
+| `{{Namespace\}}` | `` | `Administration\` |
+| `{{Model}}` | `User` | `User` |
+| `{{model}}` | `user` | `user` |
+| `{{Models}}` | `Users` | `Users` |
+| `{{models}}` | `users` | `users` |
 
 ## Usage
 
-You can use the package like so...
+First you have to publish the scaffold stubs.
+
+Then you can scaffold your first resource:
+```bash
+php artisan scaffold ModelName
+```
+
+### Command parameter
+
+You can force the creation with overwriting already existing files with the option `--force`.
+
+If you wan only some resources to be generated use `--with` or `--except` for each resource type you want to include or exclude. Each parameter can be used multiple with lowercased resource type names like `model`, `controller` and so on.
+
+### Show resource types configured
+
+You can display all configured resource types with this command:
+```bash
+php artisan scaffold:show
+```
