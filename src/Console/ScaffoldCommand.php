@@ -172,8 +172,6 @@ class ScaffoldCommand extends Command
 		foreach ($placeholder as $key => $value) {
 			$this->placeholder->put('{{' . $key . '}}', value($value));
 		}
-
-		$this->placeholder->dump();
 	}
 
 	/**
