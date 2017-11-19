@@ -16,7 +16,7 @@ return [
 		 */
 		'Model' => [
 			'stub' => resource_path('stubs/model.stub'),
-			'target' => app_path('Models/{{Model}}.php'),
+			'target' => app_path('Models/{{Namespace\}}{{Model}}.php'),
 		],
 
 		/**
