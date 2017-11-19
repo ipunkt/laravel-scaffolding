@@ -1,12 +1,12 @@
 <?php
 
-namespace Ipunkt\LaravelPackage\Providers;
+namespace Ipunkt\LaravelScaffolding\Providers;
 
 use Ipunkt\Laravel\PackageManager\Providers\ArtisanServiceProvider;
 
 class CommandProvider extends ArtisanServiceProvider
 {
-    protected $commands = [];
+	protected $commands = [];
 
-    protected $registerOnlyForConsole = true;
+	protected $registerOnlyForConsole = true;
 }

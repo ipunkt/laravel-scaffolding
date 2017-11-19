@@ -1,24 +1,20 @@
 <?php
 
-namespace Ipunkt\LaravelPackage\Providers;
+namespace Ipunkt\LaravelScaffolding\Providers;
 
 use Illuminate\Support\AggregateServiceProvider;
 
-class LaravelPackageServiceProvider extends AggregateServiceProvider
+class LaravelScaffoldingServiceProvider extends AggregateServiceProvider
 {
-    const NAMESPACE = 'my-package';
+	const NAMESPACE = 'laravel-scaffolding';
 
-    /**
-     * The provider class names.
-     *
-     * @var array
-     */
-    protected $providers = [
-        ConfigurationProvider::class,
-        MigrationProvider::class,
-        RoutesProvider::class,
-        TranslationProvider::class,
-        ViewProvider::class,
-        CommandProvider::class,
-    ];
+	/**
+	 * The provider class names.
+	 *
+	 * @var array
+	 */
+	protected $providers = [
+		ConfigurationProvider::class,
+		CommandProvider::class,
+	];
 }

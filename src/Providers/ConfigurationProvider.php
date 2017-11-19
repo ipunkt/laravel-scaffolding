@@ -1,14 +1,14 @@
 <?php
 
-namespace Ipunkt\LaravelPackage\Providers;
+namespace Ipunkt\LaravelScaffolding\Providers;
 
 use Ipunkt\Laravel\PackageManager\Providers\ConfigurationServiceProvider;
 
 class ConfigurationProvider extends ConfigurationServiceProvider
 {
-    protected $packagePath = __DIR__ . '/../../';
+	protected $packagePath = __DIR__ . '/../../';
 
-    protected $configurationFiles = [
-        LaravelPackageServiceProvider::NAMESPACE => 'config/config.php',
-    ];
+	protected $configurationFiles = [
+		LaravelScaffoldingServiceProvider::NAMESPACE => 'config/config.php',
+	];
 }
