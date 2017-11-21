@@ -8,6 +8,7 @@
     "illuminate/support": "^5.5"
   },
   "require-dev": {
+    "laravel/framework": "5.5.*",
     "phpunit/phpunit": "^6.4"
   },
   "autoload": {
