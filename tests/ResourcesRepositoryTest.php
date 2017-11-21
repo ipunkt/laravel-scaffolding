@@ -216,4 +216,76 @@ class ResourcesRepositoryTest extends TestCase
 			]
 		]), $resourceRepository->resources());
 	}
+
+	/** @test */
+	public function it_does_nothing_on_including_empty_array()
+	{
+		// ARRANGE
+		/** @var ResourcesRepository $resourceRepository */
+		$resourceRepository = new ResourcesRepository([
+			'Model' => [
+				[
+					'stub' => 'stubs/model.stub',
+					'target' => 'Models/{{Model}}.php',
+				],
+				[
+					'stub' => 'stubs/model2.stub',
+					'target' => 'Models/{{Model}}2.php',
+				],
+			]
+		]);
+
+		// ACT
+		$resourceRepository->include([]);
+
+		// ASSERT
+		$this->assertEquals(collect([
+			'Model' => [
+				[
+					'stub' => 'stubs/model.stub',
+					'target' => 'Models/{{Model}}.php',
+				],
+				[
+					'stub' => 'stubs/model2.stub',
+					'target' => 'Models/{{Model}}2.php',
+				],
+			]
+		]), $resourceRepository->resources());
+	}
+
+	/** @test */
+	public function it_does_nothing_on_excluding_empty_array()
+	{
+		// ARRANGE
+		/** @var ResourcesRepository $resourceRepository */
+		$resourceRepository = new ResourcesRepository([
+			'Model' => [
+				[
+					'stub' => 'stubs/model.stub',
+					'target' => 'Models/{{Model}}.php',
+				],
+				[
+					'stub' => 'stubs/model2.stub',
+					'target' => 'Models/{{Model}}2.php',
+				],
+			]
+		]);
+
+		// ACT
+		$resourceRepository->exclude([]);
+
+		// ASSERT
+		$this->assertEquals(collect([
+			'Model' => [
+				[
+					'stub' => 'stubs/model.stub',
+					'target' => 'Models/{{Model}}.php',
+				],
+				[
+					'stub' => 'stubs/model2.stub',
+					'target' => 'Models/{{Model}}2.php',
+				],
+			]
+		]), $resourceRepository->resources());
+	}
 }

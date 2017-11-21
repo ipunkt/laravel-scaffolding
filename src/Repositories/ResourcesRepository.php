@@ -31,6 +31,10 @@ class ResourcesRepository
 
 	public function include(array $resourceTypes): self
 	{
+		if (empty($resourceTypes)) {
+			return $this;
+		}
+
 		$this->resources = $this->resources->filter(
 			function ($options, $resource) use ($resourceTypes) {
 				return in_array(strtolower($resource), $resourceTypes);
@@ -42,6 +46,10 @@ class ResourcesRepository
 
 	public function exclude(array $resourceTypes): self
 	{
+		if (empty($resourceTypes)) {
+			return $this;
+		}
+
 		$this->resources = $this->resources->filter(
 			function ($options, $resource) use ($resourceTypes) {
 				return ! in_array(strtolower($resource), $resourceTypes);
