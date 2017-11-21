@@ -3,6 +3,7 @@
 namespace Ipunkt\LaravelScaffolding\Console;
 
 use Illuminate\Console\Command;
+use Ipunkt\LaravelScaffolding\Repositories\ResourcesRepository;
 
 class ScaffoldShowCommand extends Command
 {
@@ -15,6 +16,19 @@ class ScaffoldShowCommand extends Command
 	 * @var string
 	 */
 	protected $description = 'Shows all resources that can be scaffold';
+	/**
+	 *
+	 *
+	 * @var \Ipunkt\LaravelScaffolding\Repositories\ResourcesRepository
+	 */
+	private $resourcesRepository;
+
+	public function __construct(ResourcesRepository $resourcesRepository)
+	{
+		parent::__construct();
+
+		$this->resourcesRepository = $resourcesRepository;
+	}
 
 	/**
 	 * Execute the console command.
@@ -23,10 +37,9 @@ class ScaffoldShowCommand extends Command
 	 */
 	public function handle()
 	{
-		$configuredResources = config('laravel-scaffolding.resources', []);
 		$resources = [];
 
-		foreach ($configuredResources as $resource => $options) {
+		foreach ($this->resourcesRepository->resources() as $resource => $options) {
 			$resources[] = [$resource];
 		}
 
