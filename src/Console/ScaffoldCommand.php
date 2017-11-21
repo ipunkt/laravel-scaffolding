@@ -169,6 +169,8 @@ class ScaffoldCommand extends Command
 		$this->placeholder->put('{{Namespace}}', $namespace);
 		$this->placeholder->put('{{\Namespace}}', $prefixedNamespace);
 		$this->placeholder->put('{{Namespace\}}', $suffixedNamespace);
+		$this->placeholder->put('{{\namespace}}', strtolower($prefixedNamespace));
+		$this->placeholder->put('{{namespace\}}', strtolower($suffixedNamespace));
 		$this->placeholder->put('{{namespace}}', strtolower($namespace));
 		$this->placeholder->put('{{.namespace}}', strtolower($prefixDottedNamespace));
 		$this->placeholder->put('{{namespace.}}', strtolower($suffixDottedNamespace));
