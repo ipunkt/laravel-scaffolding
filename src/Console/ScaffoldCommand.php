@@ -149,7 +149,11 @@ class ScaffoldCommand extends Command
 	protected function buildPlaceholder()
 	{
 		$name = $this->getNameInput();
-		$suffixedNamespace = $prefixedNamespace = $namespace = '';
+		$namespace = '';
+		$suffixedNamespace = '';
+		$prefixedNamespace = '';
+		$prefixDottedNamespace = '';
+		$suffixDottedNamespace = '';
 
 		$namespaceSeparator = "\\";
 		if (substr_count($name, $namespaceSeparator)) {
