@@ -6,6 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
 use Ipunkt\LaravelScaffolding\Console\ScaffoldCommand;
 use Ipunkt\LaravelScaffolding\Console\ScaffoldShowCommand;
+use Ipunkt\LaravelScaffolding\Repositories\PlaceholderRepository;
 
 class LaravelScaffoldingServiceProvider extends ServiceProvider
 {
@@ -37,6 +38,10 @@ class LaravelScaffoldingServiceProvider extends ServiceProvider
 		}
 
 		$this->registerCommands($this->commands);
+
+		$this->app->singleton(PlaceholderRepository::class, function () {
+			return new PlaceholderRepository(config('laravel-scaffolding.placeholder', null));
+		});
 	}
 
 	/**
