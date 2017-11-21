@@ -1,6 +1,6 @@
 # Scaffolding for your project
 
-[![Latest Stable Version](https://poser.pugx.org/ipunkt/laravel-scaffolding/v/stable.svg)](https://packagist.org/packages/ipunkt/laravel-scaffolding) [![Latest Unstable Version](https://poser.pugx.org/ipunkt/laravel-scaffolding/v/unstable.svg)](https://packagist.org/packages/ipunkt/laravel-scaffolding) [![License](https://poser.pugx.org/ipunkt/laravel-scaffolding/license.svg)](https://packagist.org/packages/ipunkt/laravel-scaffolding) [![Total Downloads](https://poser.pugx.org/ipunkt/laravel-scaffolding/downloads.svg)](https://packagist.org/packages/ipunkt/laravel-scaffolding)
+[![Latest Stable Version](https://poser.pugx.org/ipunkt/laravel-scaffolding/v/stable.svg)](https://packagist.org/packages/ipunkt/laravel-scaffolding) [![Latest Unstable Version](https://poser.pugx.org/ipunkt/laravel-scaffolding/v/unstable.svg)](https://packagist.org/packages/ipunkt/laravel-scaffolding) [![License](https://poser.pugx.org/ipunkt/laravel-scaffolding/license.svg)](https://packagist.org/packages/ipunkt/laravel-scaffolding) [![Total Downloads](https://poser.pugx.org/ipunkt/laravel-scaffolding/downloads.svg)](https://packagist.org/packages/ipunkt/laravel-scaffolding) [![Build Status](https://travis-ci.org/ipunkt/laravel-scaffolding.svg?branch=master)](https://travis-ci.org/ipunkt/laravel-scaffolding.svg?branch=master)
 
 This laravel package can scaffold a new resource within seconds. It uses all project-based template stubs to get your project-based setup within the stubs.
 
