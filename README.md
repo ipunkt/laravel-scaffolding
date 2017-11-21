@@ -63,6 +63,8 @@ These placeholders are provided internally:
 | `{{\Namespace}}` | empty string | `\Administration` |
 | `{{Namespace\}}` | empty string | `Administration\` |
 | `{{namespace}}` | empty string | `administration` |
+| `{{\namespace}}` | empty string | `\administration` |
+| `{{namespace\}}` | empty string | `administration\` |
 | `{{.namespace}}` | empty string | `.administration` |
 | `{{namespace.}}` | empty string | `administration.` |
 | `{{Model}}` | `User` | `User` |
