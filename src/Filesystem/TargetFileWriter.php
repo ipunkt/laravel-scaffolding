@@ -20,6 +20,11 @@ class TargetFileWriter
 
 	protected $overwrite = false;
 
+	/**
+	 * @var \Illuminate\Filesystem\Filesystem
+	 */
+	private $filesystem;
+
 	public function __construct(Filesystem $filesystem)
 	{
 		$this->filesystem = $filesystem;
@@ -51,10 +56,10 @@ class TargetFileWriter
 			if ( ! $this->filesystem->exists($target)) {
 				$writeMode = self::WRITE_MODE_WRITE;
 			}
-		}
-
-		if ($this->filesystem->exists($target) && ! $this->overwrite) {
-			throw new \InvalidArgumentException('Target file already exists');
+		} else {
+			if ($this->filesystem->exists($target) && ! $this->overwrite) {
+				throw new \InvalidArgumentException('Target file already exists');
+			}
 		}
 
 		if ($writeMode === self::WRITE_MODE_APPEND) {
