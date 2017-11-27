@@ -187,4 +187,21 @@ class PlaceholderRepositoryTest extends TestCase
 			'users',
 		], $placeholder->values()->all());
 	}
+
+	/** @test */
+	public function it_resolves_camel_cased_resource_names_correct()
+	{
+		// ARRANGE
+		/** @var PlaceholderRepository $repository */
+		$repository = resolve(PlaceholderRepository::class);
+
+		// ACT
+		$repository->setName('UserModel');
+
+		// ASSERT
+		$this->assertEquals('UserModel', $repository->name());
+		$this->assertEquals('', $repository->namespace());
+		$this->assertEquals('user-model', $repository->placeholder()->get('{{model}}'));
+		$this->assertEquals('user-models', $repository->placeholder()->get('{{models}}'));
+	}
 }

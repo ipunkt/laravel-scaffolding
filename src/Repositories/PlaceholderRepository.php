@@ -99,8 +99,8 @@ class PlaceholderRepository
 		$this->addPlaceholder('.namespace', strtolower($prefixDottedNamespace));
 		$this->addPlaceholder('namespace.', strtolower($suffixDottedNamespace));
 		$this->addPlaceholder('Model', str_singular($name));
-		$this->addPlaceholder('model', strtolower(str_singular($name)));
+		$this->addPlaceholder('model', kebab_case(str_singular($name)));
 		$this->addPlaceholder('Models', str_plural($name));
-		$this->addPlaceholder('models', strtolower(str_plural($name)));
+		$this->addPlaceholder('models', kebab_case(str_plural($name)));
 	}
 }
