@@ -20,11 +20,6 @@ class TargetFileWriter
 
 	protected $overwrite = false;
 
-	/**
-	 * @var \Illuminate\Filesystem\Filesystem
-	 */
-	private $filesystem;
-
 	public function __construct(Filesystem $filesystem)
 	{
 		$this->filesystem = $filesystem;
