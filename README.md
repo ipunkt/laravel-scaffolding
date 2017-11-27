@@ -72,6 +72,13 @@ These placeholders are provided internally:
 | `{{Models}}` | `Users` | `Users` |
 | `{{models}}` | `users` | `users` |
 
+| Placeholder | Value for Resource `UserModel` |
+| --- | --- |
+| `{{Model}}` | `UserModel` |
+| `{{model}}` | `user-model` |
+| `{{Models}}` | `UserModels` |
+| `{{models}}` | `user-models` |
+
 ## Usage
 
 First you have to publish the scaffold stubs.
